@@ -4,27 +4,26 @@ import "./Watchlist.css";
 function WatchlistOption(props) {
   const { stockdata } = props;
   const [updatedStockData, setUpdatedStockData] = useState(stockdata);
-  const [draggedItem, setDraggedItem] = useState(null);
 
   useEffect(() => {
     setUpdatedStockData(stockdata);
   }, [stockdata]);
 
   const handleDragStart = (e, item, index) => {
-    e.dataTransfer.setData("text/plain", index);
-    setDraggedItem({ item, index });
+     e.dataTransfer.setData("text/plain", index);
   };
 
-  const handleDragOver = (e, targetIndex) => {
+  const handleDragOver = (e) => {
     e.preventDefault();
   };
 
   const handleDrop = (e, targetIndex) => {
-    if (draggedItem === null) return;
+    
 
     const updatedList = [...updatedStockData]; 
     
-    const droppedIndex = parseInt(e.dataTransfer.getData("text/plain"));
+    const droppedIndex = (e.dataTransfer.getData("text/plain"));
+    console.log(droppedIndex,"droppedIndex")
 
  
     const temp = updatedList[targetIndex];
@@ -32,7 +31,7 @@ function WatchlistOption(props) {
     updatedList[droppedIndex] = temp;
 
     setUpdatedStockData(updatedList);
-    setDraggedItem(null);
+    
   };
 
   return (
