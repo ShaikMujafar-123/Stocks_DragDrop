@@ -7,6 +7,7 @@ function WatchlistOption(props) {
 
   useEffect(() => {
     setUpdatedStockData(stockdata);
+
   }, [stockdata]);
 
   const handleDragStart = (e, item, index) => {
@@ -23,14 +24,13 @@ function WatchlistOption(props) {
     const updatedList = [...updatedStockData]; 
     
     const droppedIndex = (e.dataTransfer.getData("text/plain"));
-    console.log(droppedIndex,"droppedIndex")
-
- 
+  
     const temp = updatedList[targetIndex];
     updatedList[targetIndex] = updatedList[droppedIndex];
     updatedList[droppedIndex] = temp;
 
     setUpdatedStockData(updatedList);
+    console.log(updatedList,"updatedList")
     
   };
 
