@@ -1,0 +1,55 @@
+
+.watchlist-container {
+    margin-top: 10px;
+    width: 300px;
+    height: auto; 
+  }
+  
+  .stock-item {
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+  }
+  .Stock_Data {
+    display: flex;
+  }
+  .Stock_category {
+    background-color: #e2dede;
+    border-radius: 5px;
+    padding: 2px;
+    margin-left: 10px;
+    font-weight: 500;
+    color: #363636;
+    font-size: 14px;
+  }
+
+  .Stock_name {
+    font-weight: bold;
+  }
+  
+  
+  .Stock_value {
+    font-weight: bold;
+    color: #030303; 
+  }
+  
+.stock-item:hover {
+    background-color: #f0f0f0; 
+  }
+  
+
+  .stock-item:hover .Stock_name {
+    color: #0077b6; 
+  }
+  
+  .stock-item:hover .Stock_category {
+    background-color: #fff; 
+
+  }
+  
+ 
+  
