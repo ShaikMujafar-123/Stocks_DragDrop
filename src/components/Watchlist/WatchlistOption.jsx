@@ -35,7 +35,9 @@ function WatchlistOption(props) {
   };
 
   return (
+    
     <div className="watchlist-container">
+      <h3 className="Watchllist-header">Stock Watchlist</h3>
       {updatedStockData.map((stock, index) => (
         <div
           key={index}
