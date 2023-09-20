@@ -34,6 +34,11 @@ export const WATCHLIST_STOCKS = [
     Stock_category: "NSE",
     Stock_value: 2550.55,
   },
+  {
+    Stock_name: "ARTL",
+    Stock_category: "NSE",
+    Stock_value: 2550.55,
+  },
   
   
   
